@@ -1,6 +1,6 @@
 from django.db import models
 
-class New(models.Model):
+class News(models.Model):
     title = models.CharField(max_length=500,blank=False)
     link = models.URLField(max_length=200)
     guid = models.TextField()
@@ -10,7 +10,7 @@ class New(models.Model):
     description = models.TextField()    
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         return reverse("News_detail", kwargs={"pk": self.pk})

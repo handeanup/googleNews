@@ -9,6 +9,8 @@ pylint = "*"
 [packages]
 django = "*"
 feedparser = "*"
+celery = "*"
+redis = {version = "*",extras = ["celery"]}
 
 [requires]
 python_version = "3.5"
