@@ -7,7 +7,8 @@ class News(models.Model):
     publish_date = models.CharField(max_length=50)
     source_title = models.CharField(max_length=50,blank=True)
     source_link = models.URLField(max_length=200)
-    description = models.TextField()    
+    description = models.TextField()
+    update_date = models.DateTimeField(auto_now=True)   
 
     def __str__(self):
         return self.title

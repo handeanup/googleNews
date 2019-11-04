@@ -15,14 +15,14 @@ def update_news_feed():
             guid = feed.guid
             source_title = feed.source["title"]
             source_link = feed.source["href"]
-            desc = feed.description.encode("utf-8")
+            description = feed.description.encode("utf-8")
             if News.objects.filter(guid = guid).count() == 0:
-                n = News(title=title,
-                link=link,
+                n = News(title=title.decode('utf-8'),
+                link=link.decode('utf-8'),
                 guid=guid,
                 source_title=source_title,
                 source_link=source_link,
-                desc=desc)
+                description=description)
                 n.save()
 
     except Exception as e:
