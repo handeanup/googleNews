@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 from django.template import Template, Context
-from news.celery import app
+from .celery import app
 import feedparser
-from .models import News
+from news.models import News
 
 @app.task
 def update_news_feed():

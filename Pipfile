@@ -10,7 +10,11 @@ pylint = "*"
 django = "*"
 feedparser = "*"
 celery = "*"
-redis = {version = "*",extras = ["celery"]}
+django-celery = "*"
+django-celery-beat = "*"
+publisher = "*"
+eventlet = "*"
+gevent = "*"
 
 [requires]
 python_version = "3.5"

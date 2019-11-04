@@ -4,5 +4,4 @@ from .models import News
 
 def NewsHome(request):
     objs = News.objects.all()
-    '''return HttpResponse('hello')'''
-    return render(request, 'news.html', context={'name':'Anup','data':objs}) 
+    return render(request, 'news.html', context={'name':'Google News','data':objs}) 
